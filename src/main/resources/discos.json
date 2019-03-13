@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "titulo": "Utrecht",
+    "lanzamiento": 48,
+    "ventas": 338949
+  },
+  {
+    "id": "2",
+    "titulo": "Amsterdam",
+    "lanzamiento": 1000,
+    "ventas": 834119
+  },
+  {
+    "id": "3",
+    "titulo": "Rotterdam",
+    "lanzamiento": 1260,
+    "ventas": 630383
+  },
+  {
+    "id": "4",
+    "titulo": "New York",
+    "lanzamiento": 1624,
+    "ventas": 9576321
+  },
+  {
+    "id": "5",
+    "titulo": "Nijmegen",
+    "lanzamiento": -15,
+    "ventas": 172063
+  },
+  {
+    "id": "6",
+    "titulo": "Rome",
+    "lanzamiento": -753,
+    "ventas": 2863322
+  }
+]

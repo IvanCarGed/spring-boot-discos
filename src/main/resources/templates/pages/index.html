@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:title="'Hola'">
+<th:block layout:fragment="content">
+    <p>Ejemplo para usar thymeleaf con discos</p>
+
+    <p><a th:href="@{/discos}" href="discos.html">Ver discos</a></p>
+</th:block>
+</html>

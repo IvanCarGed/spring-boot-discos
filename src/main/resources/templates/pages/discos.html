@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:title="Discos">
+<th:block layout:fragment="content">
+    <table class="table table-striped table-bordered" id="discos">
+        <thead>
+        <tr>
+            <th scope="col">Disco</th>
+            <th scope="col">Fecha de lanzamiento</th>
+            <th scope="col">Ventas</th>
+            <th scope="col">Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="disco : ${discos}" th:id="|disco_${disco.id}|">
+        
+            <th scope="row">
+                <span id="titulo" data-type="text" data-title="Titulo"
+                      th:attr="data-url=@{/discos}, data-pk=${disco.id}, data-value=${disco.titulo}"
+                      class="inline-editable"
+                      th:text="${disco.titulo}">Titulo Disco</span>
+            </th>
+            <td class="text-right">
+                <span id="lanzamiento" data-type="number" data-title="Lanzamiento"
+                      th:attr="data-url=@{/discos}, data-pk=${disco.id}, data-value=${disco.lanzamiento}"
+                      data-clear="false"
+                      class="inline-editable"
+                      th:text="${disco.lanzamiento}">Fecha de lanzamiento</span>
+            </td>
+            <td class="text-right">
+                <span id="ventas" data-type="number" data-title="Ventas"
+                      th:attr="data-url=@{/discos}, data-pk=${disco.id}, data-value=${disco.ventas}"
+                      data-clear="false"
+                      class="inline-editable"
+                      th:text="${#numbers.formatInteger(disco.ventas, 1, 'DEFAULT')}">Ventas</span>
+            </td>
+            <td>
+                <a th:href="@{|/discos/${disco.id}|}"
+                   th:attr="aria-label=${'Edit ' + disco.titulo}" class="disc-link">Editar</a>
+                <a th:href="@{|/discos/${disco.id}/delete|}"
+                   th:attr="aria-label=${'Delete ' + disco.titulo}" class="disc-link">Borrar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</th:block>
+<th:block layout:fragment="body_end">
+    <div class="modal fade" tabindex="-1" role="dialog" id="discModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Editar disco</h4>
+                </div>
+                <div class="modal-body">
+                    <p>....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

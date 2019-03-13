@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "nombre": "Utrecht",
+    "fundadaEn": 48,
+    "poblacion": 338949
+  },
+  {
+    "id": "2",
+    "nombre": "Amsterdam",
+    "fundadaEn": 1000,
+    "poblacion": 834119
+  },
+  {
+    "id": "3",
+    "nombre": "Rotterdam",
+    "fundadaEn": 1260,
+    "poblacion": 630383
+  },
+  {
+    "id": "4",
+    "nombre": "New York",
+    "fundadaEn": 1624,
+    "poblacion": 9576321
+  },
+  {
+    "id": "5",
+    "nombre": "Nijmegen",
+    "fundadaEn": -15,
+    "poblacion": 172063
+  },
+  {
+    "id": "6",
+    "nombre": "Rome",
+    "fundadaEn": -753,
+    "poblacion": 2863322
+  }
+]
